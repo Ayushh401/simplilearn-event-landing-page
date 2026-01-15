@@ -1,0 +1,8 @@
+# Airtable Configuration
+# Get your API key from Airtable account settings (Personal Access Token)
+AIRTABLE_API_KEY=your_personal_access_token_here
+
+# The Base ID can be found in the Airtable API documentation for your base
+AIRTABLE_BASE_ID=your_base_id_here
+# The name of the table where RSVP data will be stored
+AIRTABLE_TABLE_NAME=your_table_name_here
