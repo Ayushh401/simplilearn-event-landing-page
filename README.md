@@ -16,6 +16,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Environment Configuration
+
+This project requires an Airtable connection to store RSVP data. 
+
+1. Create a `.env.local` file in the root directory.
+2. Copy the contents of `.env.example` into `.env.local`.
+3. Provide your Airtable API Key (Personal Access Token), Base ID, and Table Name.
+
+## Deployment
+
+### Deploy on Vercel
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
@@ -29,8 +41,10 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Live Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+When deploying to production (e.g., on Vercel), ensure you add the following environment variables in your deployment dashboard:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `AIRTABLE_API_KEY`
+- `AIRTABLE_BASE_ID`
+- `AIRTABLE_TABLE_NAME` (Optional, defaults to 'RSVPs')
